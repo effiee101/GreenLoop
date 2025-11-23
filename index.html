@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenLoop Textiles Ltd. | Business Plan Nov 2025</title>
-    
+    <title>GreenLoop Textiles Ltd. | Industrial Textile Upcycling</title>
+    <meta name="description" content="Bangladesh’s circular textile pioneer. Convert cutting-room waste into certified recycled fiber with GreenLoop.">
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght[500,700]&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -20,10 +17,10 @@
                         display: ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
-                        bg: '#020617', 
+                        bg: '#020617',
                         surface: '#0F172A',
-                        primary: '#10B981', // Emerald 500
-                        accent: '#0EA5E9', // Sky 500
+                        primary: '#10B981',
+                        accent: '#0EA5E9',
                         gold: '#F59E0B',
                         'text-light': '#F8FAFC',
                         'accent-green': '#10B981',
@@ -46,11 +43,8 @@
             }
         }
     </script>
-
     <style>
         body { background-color: #020617; color: #F8FAFC; scroll-behavior: smooth; }
-        
-        /* Glassmorphism Utilities */
         .glass-card {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(12px);
@@ -64,43 +58,28 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
-
         .text-gradient {
             background: linear-gradient(to right, #10B981, #0EA5E9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        /* Presentation Overlay */
         .present-overlay {
             position: fixed; inset: 0; background: #020617; z-index: 100;
             transform: translateY(100%); transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
             display: flex; flex-direction: column;
         }
         .present-overlay.active { transform: translateY(0); }
-        
-        .slide-container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; position: relative; }
-        .slide { 
-            display: none; 
-            max-width: 1200px; 
-            width: 100%; 
-            /* Added Slide Animation */
-            animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; 
-        }
+        .slide-container { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+        .slide { display: none; max-width: 1200px; width: 100%; animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
         .slide.active { display: block; }
-
         @keyframes slideIn {
             from { opacity: 0; transform: scale(0.98) translateY(10px); }
             to { opacity: 1; transform: scale(1) translateY(0); }
         }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #020617; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
-        
-        /* Team Member Styling */
         .team-member {
             position: relative;
             padding: 2rem;
@@ -126,12 +105,12 @@
     </style>
 </head>
 <body class="antialiased">
-
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
         <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/10 blur-[120px] rounded-full"></div>
     </div>
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -143,24 +122,19 @@
                     <span class="text-[10px] uppercase tracking-widest text-gray-400">Textiles Ltd.</span>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-                <a href="#summary" class="hover:text-white transition">Company</a>
-                <a href="#investment" class="hover:text-white transition">Capital</a>
-                <a href="#strategy" class="hover:text-white transition">Strategy</a>
-                <a href="#hr" class="hover:text-white transition">HR & Team</a>
-                <button onclick="togglePresentation()" class="flex items-center gap-2 bg-white/5 hover:bg-white/10 hover:text-white px-5 py-2.5 rounded-full text-primary transition border border-primary/20 shadow-lg hover:shadow-primary/10 group">
-                    <i class="fa-solid fa-play text-xs group-hover:scale-110 transition-transform"></i> Presentation Mode
-                </button>
-            </div>
+            <button onclick="togglePresentation()" class="flex items-center gap-2 bg-white/5 hover:bg-white/10 hover:text-white px-5 py-2.5 rounded-full text-primary transition border border-primary/20 shadow-lg hover:shadow-primary/10 group">
+                <i class="fa-solid fa-play text-xs group-hover:scale-110 transition-transform"></i> Investor Deck
+            </button>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="min-h-screen flex items-center pt-20">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div class="animate-fade-in-up">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-6">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Business Plan: Nov 2025
+                    Industrial Circular Innovation | Dhaka, 2025
                 </div>
                 <h1 class="font-display text-5xl lg:text-7xl font-bold leading-tight mb-6">
                     Industrial-Scale <br>
@@ -171,589 +145,379 @@
                 </p>
                 <div class="flex gap-4">
                     <button onclick="togglePresentation()" class="px-8 py-4 bg-primary text-bg font-bold rounded-xl hover:bg-emerald-400 transition shadow-lg shadow-primary/20">
-                        View Presentation
+                        View Investor Deck
                     </button>
-                    <a href="#strategy" class="px-8 py-4 bg-white/5 text-white font-bold rounded-xl border border-white/10 hover:bg-white/10 transition">
-                        GTF Strategy
+                    <a href="#services" class="px-8 py-4 bg-white/5 text-white font-bold rounded-xl border border-white/10 hover:bg-white/10 transition">
+                        Our Services
                     </a>
                 </div>
             </div>
-            
             <div class="relative animate-float">
                 <div class="glass-card p-8 rounded-3xl relative z-10">
                     <div class="flex justify-between items-start mb-8">
                         <div>
-                            <div class="text-xs text-gray-500 uppercase font-bold tracking-wider">Primary Capital (Equity)</div>
-                            <div class="font-display text-3xl font-bold text-gold mt-1">৳ 500,000</div>
+                            <div class="text-xs text-gray-500 uppercase font-bold tracking-wider">Founder Equity</div>
+                            <div class="font-display text-3xl font-bold text-gold mt-1">৳ 50,00,000</div>
                         </div>
                         <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold">
                             <i class="fa-solid fa-hand-holding-dollar"></i>
                         </div>
                     </div>
-                    
                     <div class="space-y-4">
                         <div class="p-4 bg-white/5 rounded-xl border border-white/5 flex justify-between items-center">
                             <div>
-                                <div class="text-xs text-gray-400">Projected Annual Revenue (FY26)</div>
-                                <div class="text-xl font-bold text-white">BDT 50 Million</div>
+                                <div class="text-xs text-gray-400">Fiber Price Advantage</div>
+                                <div class="text-xl font-bold text-emerald-400">30–40% Below Virgin</div>
                             </div>
-                            <i class="fa-solid fa-chart-line text-white/50"></i>
+                            <i class="fa-solid fa-percent text-emerald-500/50"></i>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl border border-white/5 flex justify-between items-center">
                             <div>
-                                <div class="text-xs text-gray-400">Target Raw Material Volume</div>
-                                <div class="text-xl font-bold text-emerald-400">2,500 MT / Year</div>
+                                <div class="text-xs text-gray-400">Waste Collection</div>
+                                <div class="text-xl font-bold text-white">Free Pickup | Dhaka Zone</div>
                             </div>
-                            <i class="fa-solid fa-box-open text-emerald-500/50"></i>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 pt-6 border-t border-white/10">
-                        <div class="flex items-center gap-3 text-sm text-gray-400">
-                            <i class="fa-solid fa-location-dot text-primary"></i>
-                            <span>Dhaka (Savar/Gazipur Economic Zones)</span>
+                            <i class="fa-solid fa-truck text-primary/50"></i>
                         </div>
                     </div>
                 </div>
-                <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
             </div>
         </div>
     </section>
 
-    <section id="summary" class="py-24 relative">
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-surface/40">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-12">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Company Profile & Business Type</h2>
-                <p class="text-gray-400">GreenLoop Textiles Ltd. is a private limited manufacturing company specializing in pre-consumer waste recycling.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 text-blue-400 text-xl">
-                        <i class="fa-solid fa-building"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Legal Structure</h3>
-                    <p class="text-sm text-gray-400"><strong>Type:</strong> Private Limited Company. Registration with RJSC initiated. Compliant with Bangladesh Labor Act 2006.</p>
-                </div>
-                
-                <div class="glass-card p-6 rounded-2xl">
-                    <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4 text-emerald-400 text-xl">
-                        <i class="fa-solid fa-bullseye"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Business Nature</h3>
-                    <p class="text-sm text-gray-400"><strong>B2B Textile Manufacturing.</strong> Core focus is 'Green' or 'Circular' manufacturing, targeting large garment export houses and spinning mills.</p>
-                </div>
-
-                <div class="glass-card p-6 rounded-2xl border-primary/30 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 px-3 py-1 bg-primary text-bg text-xs font-bold rounded-bl-xl">USP</div>
-                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-400 text-xl">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Advantage</h3>
-                    <p class="text-sm text-gray-400">Low-cost financing via <strong>Green Transformation Fund (GTF)</strong> for importing state-of-the-art machinery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="investment" class="py-12 bg-surface/50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-display text-3xl font-bold mb-8">Initial Capital Investment</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <p class="text-gray-400 text-lg mb-4">
-                        The total estimated project cost is approximately <strong>BDT 100,000,000</strong> (USD 900k), primarily covered by the GTF Loan for CapEx.
-                    </p>
-                    <p class="text-gray-400 text-lg mb-6">
-                        The <b>Initial Capital</b> used to cover pre-operational expenses (registration, feasibility, initial team setup) is <strong>BDT 500,000</strong>, funded entirely through <b>Self-Investment (Founders' Equity)</b>.
-                    </p>
-                    <div class="p-6 bg-white/5 rounded-xl border border-gold/30">
-                        <div class="text-sm text-gray-400 uppercase">Initial Capital Source</div>
-                        <div class="text-3xl font-bold text-gold">Self-Investment (Equity)</div>
-                        <div class="text-sm text-gray-500 mt-1">BDT 500,000 to cover immediate seed and start-up costs.</div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-white">Funding Structure</h3>
-                    <ul class="list-disc list-inside text-gray-400 ml-4">
-                        <li><strong>GTF Loan:</strong> ~95% of CapEx (Machinery).</li>
-                        <li><strong>Equity Capital:</strong> BDT 500,000 (Self-Investment).</li>
-                        <li><strong>Local Bank Working Capital:</strong> Post-launch operational funding.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="strategy" class="py-24 bg-white/5 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-display text-4xl font-bold mb-12 text-center">Strategy: Product, Pricing, & Sales</h2>
+            <h2 class="font-display text-4xl font-bold text-center mb-16">Our Services for Garment & Spinning Partners</h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-primary">
-                    <h3 class="text-2xl font-bold mb-4 text-white flex items-center"><i class="fa-solid fa-box-open mr-3"></i> Product/Services</h3>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
-                        <li><strong>Recycled Cotton Fiber:</strong> Primary output. Sold to Open-End spinning mills.</li>
-                        <li><strong>Recycled Polyester Yarn:</strong> Secondary output from plastic waste.</li>
-                        <li><strong>Zero-Waste Consulting:</strong> Value-added service to secure long-term raw material supply contracts with key garment factories.</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-3 text-white">1. Waste-to-Fiber Conversion</h3>
+                    <p class="text-gray-400 mb-4">We collect your pre-consumer cotton/polyester cutting waste and convert it into high-quality recycled fiber.</p>
+                    <div class="text-sm text-gray-500 p-3 bg-white/5 rounded-lg">
+                        ✅ Free pickup (Dhaka)<br>
+                        ✅ Traceable output (GRS/GOTS-ready)<br>
+                        ✅ 30–40% cheaper than virgin cotton
+                    </div>
                 </div>
-
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-accent">
-                    <h3 class="text-2xl font-bold mb-4 text-white flex items-center"><i class="fa-solid fa-tags mr-3"></i> Price Strategy</h3>
-                    <p class="text-gray-400 mb-4">
-                        Adopt a <strong>Value-Based Pricing Model</strong> combined with <strong>Cost-Plus</strong>.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
-                        <li><strong>Recycled Fiber:</strong> Priced at 60-70% of virgin cotton market price, emphasizing cost savings and sustainability value to the buyer.</li>
-                        <li><strong>Consulting:</strong> Fee-based service tied to supply exclusivity.</li>
-                        <li><strong>Key Metric:</strong> Maintain 12-15% margin on cost.</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-3 text-white">2. Zero-Waste Certification</h3>
+                    <p class="text-gray-400 mb-4">Get official “Zero Textile Waste” certification for your factory—boosting your ESG score and buyer trust.</p>
+                    <div class="text-sm text-gray-500 p-3 bg-white/5 rounded-lg">
+                        ✅ Validated by 3rd-party audit<br>
+                        ✅ Ready for H&M, Zara, Target compliance<br>
+                        ✅ Annual partnership model
+                    </div>
                 </div>
-                
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-gold">
-                    <h3 class="text-2xl font-bold mb-4 text-white flex items-center"><i class="fa-solid fa-bullhorn mr-3"></i> Marketing & Sales</h3>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
-                        <li><strong>Direct Sales:</strong> Focus on securing MOUs with 5 large BGMEA member factories for raw material intake.</li>
-                        <li><strong>Digital Marketing:</strong> Target B2B buyers (Spinning/Weaving Mills) with compliance and sustainability data (traceability).</li>
-                        <li><strong>Certifications:</strong> Highlight <strong>GOTS</strong> (Global Organic Textile Standard) and <strong>GRS</strong> (Global Recycled Standard) compliance.</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-3 text-white">3. Bulk Recycled Fiber Supply</h3>
+                    <p class="text-gray-400 mb-4">Spinning mills: source certified recycled cotton fiber at scale, with full chain-of-custody documentation.</p>
+                    <div class="text-sm text-gray-500 p-3 bg-white/5 rounded-lg">
+                        ✅ Min. order: 5 MT<br>
+                        ✅ 12-month price lock<br>
+                        ✅ Blending support (up to 30% recycled)
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="hr" class="py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-display text-3xl font-bold mb-8">Human Resources & Team Structure</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 bg-white/5 rounded-xl border border-white/10">
-                    <h3 class="text-xl font-bold text-primary mb-2">Factory Operations (50%)</h3>
-                    <p class="text-sm text-gray-400">Skilled machine operators, sorters, quality control staff (40-50 employees for initial scale).</p>
-                </div>
-                <div class="p-6 bg-white/5 rounded-xl border border-white/10">
-                    <h3 class="text-xl font-bold text-primary mb-2">Management & Admin (10%)</h3>
-                    <p class="text-sm text-gray-400">Accounting, HR, and Compliance Manager. Focus on GTF compliance and reporting.</p>
-                </div>
-                <div class="p-6 bg-white/5 rounded-xl border border-white/10">
-                    <h3 class="text-xl font-bold text-primary mb-2">Sales & Sourcing (40%)</h3>
-                    <p class="text-sm text-gray-400">Waste sourcing officers (key to feedstock acquisition) and B2B sales leads.</p>
-                </div>
-            </div>
-            <div class="mt-8 text-center p-6 bg-surface rounded-xl">
-                <p class="text-lg text-gray-300">Total estimated headcount for FY26: <strong>~60-70 employees.</strong></p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Team Section -->
     <section class="section-padding max-w-7xl mx-auto px-6" id="team">
-        <h2 class="font-display text-5xl font-bold text-white mb-16 text-center">Founding Team</h2>
+        <h2 class="font-display text-5xl font-bold text-white mb-16 text-center">Led by Industry & Tech Pioneers</h2>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
             <div class="team-member">
                 <img src="https://placehold.co/400x480/0a1128/f8fafc?text=Orin+Khan+CEO" alt="Orin Khan, CEO">
                 <h3 class="text-2xl font-bold text-white mt-6">Orin Khan</h3>
                 <p class="text-accent-green mb-3">Chief Executive Officer</p>
-                <p class="text-slate-400 text-sm">Former Head of Digital Innovation at a leading BGMEA-member group. Scaled two SaaS ventures across South Asia. Passionate about making Bangladesh the global hub of ethical, circular manufacturing.</p>
+                <p class="text-slate-400 text-sm">Former Head of Digital Innovation at a leading BGMEA-member group. Scaled two SaaS ventures across South Asia.</p>
             </div>
             <div class="team-member">
                 <img src="https://placehold.co/400x480/0a1128/f8fafc?text=Sumaiya+Head+of+Circularity" alt="Sumaiya, Head of Circularity & Operations">
                 <h3 class="text-2xl font-bold text-white mt-6">Sumaiya</h3>
                 <p class="text-accent-green mb-3">Head of Circularity & Operations</p>
-                <p class="text-slate-400 text-sm">Led ESG integration for 50+ RMG factories under BTEPC’s pilot program. Master’s in Sustainable Textile Systems from BUET. Builds bridges between factory floors and global sustainability standards.</p>
+                <p class="text-slate-400 text-sm">Led ESG integration for 50+ RMG factories under BTEPC’s pilot program. Master’s in Sustainable Textile Systems from BUET.</p>
             </div>
             <div class="team-member">
                 <img src="https://placehold.co/400x480/0a1128/f8fafc?text=Aifee+Aadil+AI+Engineer" alt="Aifee Aadil, AI & Security Engineer">
                 <h3 class="text-2xl font-bold text-white mt-6">Aifee Aadil</h3>
                 <p class="text-accent-green mb-3">AI & Security Engineer</p>
-                <p class="text-slate-400 text-sm">Built Bangladesh’s first zero-knowledge proof system for factory compliance data. Ensures every byte on GreenLoop is private, tamper-proof, and audit-ready.</p>
+                <p class="text-slate-400 text-sm">Built Bangladesh’s first zero-knowledge proof system for factory compliance data.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-surface/50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-display text-3xl font-bold mb-12">Risk Analysis & Mitigation</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 border border-red-500/20 bg-red-500/5 rounded-xl">
-                    <h3 class="text-red-400 font-bold mb-2"><i class="fa-solid fa-arrow-trend-up mr-2"></i>Economic</h3>
-                    <p class="text-sm text-gray-300 mb-4">Sustained high inflation (8.0%) eroding purchasing power.</p>
-                    <div class="text-xs text-gray-500 border-t border-red-500/20 pt-3">
-                        <strong>Mitigation:</strong> Forward-purchasing contracts for energy; maintain high efficiency NPM.
-                    </div>
-                </div>
-                <div class="p-6 border border-blue-500/20 bg-blue-500/5 rounded-xl">
-                    <h3 class="text-blue-400 font-bold mb-2"><i class="fa-solid fa-scale-balanced mr-2"></i>Regulatory</h3>
-                    <p class="text-sm text-gray-300 mb-4">Changes in customs duty or central bank GTF rules.</p>
-                    <div class="text-xs text-gray-500 border-t border-blue-500/20 pt-3">
-                        <strong>Mitigation:</strong> Maintain strong bank relationships and specialized legal counsel.
-                    </div>
-                </div>
-                <div class="p-6 border border-amber-500/20 bg-amber-500/5 rounded-xl">
-                    <h3 class="text-amber-400 font-bold mb-2"><i class="fa-solid fa-industry mr-2"></i>Operational</h3>
-                    <p class="text-sm text-gray-300 mb-4">Machinery breakdown or fiber contamination.</p>
-                    <div class="text-xs text-gray-500 border-t border-amber-500/20 pt-3">
-                        <strong>Mitigation:</strong> Invest 5% of initial capital into spares inventory; ISO quality control.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-white/10 bg-bg">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold mb-4">Ready for Next Steps?</h2>
-            <p class="text-gray-400 mb-8">GTF Application & MOUs with target factories pending.</p>
-            <div class="text-sm text-gray-600">
-                &copy; 2025 GreenLoop Textiles Ltd. All Rights Reserved.
-            </div>
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-white/10 bg-bg">
+        <div class="text-sm text-gray-600">
+            &copy; 2025 GreenLoop Textiles Ltd. — Dhaka, Bangladesh<br>
+            <a href="mailto:hello@greenloop.bd" class="text-primary hover:underline">hello@greenloop.bd</a> | 
+            <button onclick="togglePresentation()" class="text-primary hover:underline ml-2">Investor Presentation</button>
         </div>
     </footer>
 
+    <!-- PRESENTATION MODE (13 Slides – Capital Updated to BDT 50 Lakh) -->
     <div id="presentation" class="present-overlay">
         <div class="absolute top-6 right-6 z-50">
-            <button onclick="togglePresentation()" class="text-gray-400 hover:text-white text-2xl transition transform hover:rotate-90"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="togglePresentation()" class="text-gray-400 hover:text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="absolute bottom-6 left-0 w-full flex justify-center gap-6 z-50">
-            <button onclick="changeSlide(-1)" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="changeSlide(-1)" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"><i class="fa-solid fa-arrow-left"></i></button>
             <span id="slide-counter" class="flex items-center text-gray-500 font-mono text-sm">1 / 13</span>
-            <button onclick="changeSlide(1)" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"><i class="fa-solid fa-arrow-right"></i></button>
+            <button onclick="changeSlide(1)" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
-
         <div class="slide-container">
-            
             <div class="slide active text-center">
                 <div class="inline-block px-4 py-2 border border-primary/50 text-primary rounded-full mb-8 text-sm font-bold">Business Plan: November 2025</div>
                 <h1 class="text-6xl font-display font-bold mb-6 text-white">GreenLoop Textiles Ltd.</h1>
                 <p class="text-2xl text-gray-400 max-w-3xl mx-auto">Specializing in industrial-scale upcycling of pre-consumer textile waste in Dhaka, Bangladesh.</p>
             </div>
-
             <div class="slide">
                 <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">1. Company & Business Type</h2>
                 <div class="grid grid-cols-2 gap-12 text-lg text-gray-300">
                     <div>
                         <h3 class="text-2xl font-bold text-white mb-4">Business Nature</h3>
-                        <p class="mb-4">
-                            <strong>B2B Circular Textile Manufacturing.</strong> We transform pre-consumer textile waste into high-quality recycled fiber (input) for spinning mills.
-                        </p>
-                        <p><strong>Legal Status:</strong> Private Limited Company. RJSC registered.</p>
+                        <p class="mb-4"><strong>B2B Circular Textile Manufacturing.</strong> We transform cutting-room waste into certified recycled fiber for spinning mills.</p>
+                        <p><strong>Legal Status:</strong> Private Limited Company (RJSC registered).</p>
                     </div>
                     <div class="bg-white/5 p-8 rounded-xl border border-white/10">
                         <h3 class="text-xl font-bold text-white mb-4">Core Value Proposition</h3>
                         <ul class="list-disc list-inside ml-4 space-y-2">
-                            <li><strong>Cost Reduction:</strong> Fiber priced 30-40% below virgin cotton.</li>
-                            <li><strong>Compliance:</strong> Provides traceable inputs for GOTS/GRS certified mills.</li>
-                            <li><strong>Scale:</strong> Targeting 2,500 MT annual processing volume (FY26).</li>
+                            <li><strong>Cost Savings:</strong> Fiber 30–40% below virgin cotton.</li>
+                            <li><strong>Compliance Ready:</strong> Full traceability for GOTS/GRS.</li>
+                            <li><strong>Scale:</strong> Targeting 2,500 MT/year by FY26.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="slide text-center">
                 <h2 class="text-4xl font-bold text-primary mb-8">2. Capital Investment & Structure</h2>
                 <div class="p-8 border-2 border-gold rounded-2xl bg-gold/5 mb-10 inline-block">
                     <h3 class="text-3xl font-bold text-white mb-2">Initial Capital Source</h3>
-                    <p class="text-gold text-xl"><strong>BDT 500,000 Self-Investment</strong></p>
-                    <p class="text-sm text-gray-400 mt-2">Founders' equity for immediate seed and start-up costs.</p>
+                    <p class="text-gold text-xl"><strong>BDT 50,00,000 Self-Investment</strong></p>
+                    <p class="text-sm text-gray-400 mt-2">Founders’ equity for pre-operational setup.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
                     <div class="p-6 bg-white/10 rounded-lg">
                         <h4 class="text-xl font-bold text-emerald-400 mb-2">Primary Funding Source</h4>
-                        <p class="text-lg text-gray-300"><strong>GTF Loan</strong> (Green Transformation Fund) covers ~95% of <strong>BDT 100M</strong> CapEx for machinery (optical sorting, spinning line).</p>
+                        <p class="text-gray-300"><strong>GTF Loan</strong> covers ~95% of <strong>BDT 100M</strong> CapEx.</p>
                     </div>
-                     <div class="p-6 bg-white/10 rounded-lg">
+                    <div class="p-6 bg-white/10 rounded-lg">
                         <h4 class="text-xl font-bold text-emerald-400 mb-2">Funding Breakdown</h4>
                         <ul class="list-disc list-inside text-gray-300 ml-4">
                             <li>CapEx: 95% (GTF Loan)</li>
-                            <li>Equity: BDT 500K (Self-Invested)</li>
-                            <li>Working Capital: Local bank facility (Post-launch)</li>
+                            <li>Equity: BDT 50,00,000 (Self-Invested)</li>
+                            <li>Working Capital: Local bank (Post-launch)</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="slide">
                 <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">3. Market Analysis</h2>
-                
                 <div class="grid grid-cols-3 gap-6 text-center mt-8">
                     <div class="p-8 bg-surface rounded-xl border border-blue-500/30">
-                        <div class="text-gray-400 text-sm mb-2">Total Textile Waste Generated (Annually)</div>
+                        <div class="text-gray-400 text-sm mb-2">Waste Generated (Annual)</div>
                         <div class="text-3xl font-bold text-blue-400">~400,000 MT</div>
-                        <div class="text-xs text-gray-500 mt-2">Source: BGMEA Estimates (Pre-Consumer)</div>
                     </div>
                     <div class="p-8 bg-surface rounded-xl border border-emerald-500/30">
-                        <div class="text-gray-400 text-sm mb-2">Targeted Processing Volume (FY26)</div>
+                        <div class="text-gray-400 text-sm mb-2">Our Target (FY26)</div>
                         <div class="text-3xl font-bold text-emerald-400">2,500 MT</div>
-                        <div class="text-xs text-gray-500 mt-2">1% of Addressable Market</div>
                     </div>
                     <div class="p-8 bg-surface rounded-xl border border-gold/30">
                         <div class="text-gray-400 text-sm mb-2">Demand Driver</div>
-                        <div class="text-xl font-bold text-gold mt-2">LEED Certification & EU Regulations</div>
-                        <div class="text-xs text-gray-500 mt-4">Factories require traceable green inputs</div>
+                        <div class="text-xl font-bold text-gold">EU Regulations & LEED</div>
                     </div>
                 </div>
             </div>
-
             <div class="slide">
                 <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">4. Products & Price Strategy</h2>
                 <div class="grid grid-cols-2 gap-10">
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-white mb-2">Core Products</h3>
-                        <div class="p-4 bg-white/5 rounded-xl">
+                    <div>
+                        <div class="p-4 bg-white/5 rounded-xl mb-4">
                             <h4 class="font-bold text-white">Recycled Cotton Fiber</h4>
-                            <p class="text-gray-400 text-sm">Main output, sold to Open-End spinning mills.</p>
+                            <p class="text-gray-400 text-sm">Priced at 60–70% of virgin cotton market rate.</p>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl">
                             <h4 class="font-bold text-white">Zero-Waste Consulting</h4>
-                            <p class="text-gray-400 text-sm">Fee-based service ensuring raw material exclusivity.</p>
+                            <p class="text-gray-400 text-sm">Annual fee model with waste exclusivity.</p>
                         </div>
                     </div>
                     <div class="p-6 bg-surface rounded-xl border border-accent/30">
-                        <h3 class="text-2xl font-bold text-accent mb-4">Price Strategy: Value-Based</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                            <li><strong>Fiber Pricing:</strong> Set at <strong>60-70%</strong> of the virgin cotton market price.</li>
-                            <li><strong>Value Proposition:</strong> Attract large mills by guaranteeing cost savings and GRS/GOTS compliance.</li>
-                            <li><strong>Margin Target:</strong> Maintain a minimum of <strong>12% - 15%</strong> Net Profit Margin.</li>
-                        </ul>
+                        <h3 class="text-2xl font-bold text-accent mb-4">Margin Strategy</h3>
+                        <p class="text-gray-300">Target 12–15% net profit margin via value-based pricing & GTF cost advantage.</p>
                     </div>
                 </div>
             </div>
-
             <div class="slide">
                 <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">5. Marketing & Sales Strategy</h2>
                 <div class="grid grid-cols-2 gap-10">
                     <div class="p-6 bg-surface rounded-xl border border-gold/30">
-                        <h3 class="text-2xl font-bold text-gold mb-4">Raw Material Sourcing (Buy-Side)</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                            <li><strong>Direct MOUs:</strong> Secure binding agreements with 5 large BGMEA factories for exclusive waste streams.</li>
-                            <li><strong>Service:</strong> Use Zero-Waste Consulting as an incentive for exclusivity.</li>
+                        <h3 class="text-2xl font-bold text-gold mb-4">Supply Side</h3>
+                        <ul class="list-disc list-inside text-gray-300 ml-4">
+                            <li>MOUs with 5 large BGMEA factories</li>
+                            <li>Free waste pickup in Dhaka</li>
                         </ul>
                     </div>
                     <div class="p-6 bg-surface rounded-xl border border-emerald-400/30">
-                        <h3 class="text-2xl font-bold text-emerald-400 mb-4">Product Sales (Sell-Side)</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                            <li><strong>Target:</strong> Open-End Spinning Mills focused on recycled blends.</li>
-                            <li><strong>Sales Channel:</strong> Direct B2B sales emphasizing <strong>traceability</strong> and <strong>sustainability certifications</strong> (GRS/GOTS).</li>
+                        <h3 class="text-2xl font-bold text-emerald-400 mb-4">Demand Side</h3>
+                        <ul class="list-disc list-inside text-gray-300 ml-4">
+                            <li>Target: Open-End spinning mills</li>
+                            <li>Sales via direct B2B + traceability dashboard</li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="slide text-center">
                 <h2 class="text-4xl font-bold text-primary mb-12">6. Human Resources & Staffing</h2>
                 <div class="grid grid-cols-3 gap-6 text-left">
                     <div class="p-6 bg-white/5 rounded-xl">
-                        <i class="fa-solid fa-industry text-3xl text-primary mb-3"></i>
                         <h4 class="text-xl font-bold text-white">Operations (50%)</h4>
-                        <p class="text-gray-400 text-sm mt-1">Skilled machine operators, fiber sorters, and QC team.</p>
+                        <p class="text-gray-400 text-sm">Machine operators, sorters, QC.</p>
                     </div>
                     <div class="p-6 bg-white/5 rounded-xl">
-                        <i class="fa-solid fa-sack-dollar text-3xl text-primary mb-3"></i>
                         <h4 class="text-xl font-bold text-white">Sourcing & Sales (40%)</h4>
-                        <p class="text-gray-400 text-sm mt-1">Waste sourcing officers (key to input supply) and B2B sales leads.</p>
+                        <p class="text-gray-400 text-sm">Waste officers, B2B leads.</p>
                     </div>
                     <div class="p-6 bg-white/5 rounded-xl">
-                        <i class="fa-solid fa-user-tie text-3xl text-primary mb-3"></i>
                         <h4 class="text-xl font-bold text-white">Management (10%)</h4>
-                        <p class="text-gray-400 text-sm mt-1">Compliance, Finance (GTF reporting), and Senior Management.</p>
+                        <p class="text-gray-400 text-sm">GTF compliance, finance, strategy.</p>
                     </div>
                 </div>
-                <div class="mt-8 text-lg text-gray-300">
-                    <strong>Total Estimated Headcount (FY26):</strong> <strong>~60-70 employees</strong>.
-                </div>
+                <p class="mt-6 text-gray-300">Total headcount (FY26): ~60–70</p>
             </div>
-
             <div class="slide">
                 <h2 class="text-4xl font-bold text-primary mb-8 border-b border-white/10 pb-4">7. Financial Projections</h2>
-                
                 <div class="bg-white/5 p-8 rounded-xl mt-8">
                     <div class="grid grid-cols-4 gap-4 text-sm font-bold text-gray-500 border-b border-gray-700 pb-2 mb-4">
-                        <div>Metric</div>
-                        <div class="text-right">FY 2026</div>
-                        <div class="text-right">FY 2027</div>
-                        <div class="text-right">FY 2028</div>
+                        <div>Metric</div><div class="text-right">FY26</div><div class="text-right">FY27</div><div class="text-right">FY28</div>
                     </div>
                     <div class="grid grid-cols-4 gap-4 text-white py-3 border-b border-gray-800">
-                        <div>Revenue (BDT millions)</div>
-                        <div class="text-right">50.0</div>
-                        <div class="text-right">57.4</div>
-                        <div class="text-right">65.9</div>
-                    </div>
-                    <div class="grid grid-cols-4 gap-4 text-white py-3 border-b border-gray-800">
-                        <div>EBITDA Margin</div>
-                        <div class="text-right text-green-400">20.0%</div>
-                        <div class="text-right text-green-400">20.0%</div>
-                        <div class="text-right text-green-400">21.0%</div>
+                        <div>Revenue (BDT M)</div><div class="text-right">50.0</div><div class="text-right">57.4</div><div class="text-right">65.9</div>
                     </div>
                     <div class="grid grid-cols-4 gap-4 py-3 font-bold text-xl text-emerald-400">
-                        <div>Net Profit (BDT millions)</div>
-                        <div class="text-right">7.25</div>
-                        <div class="text-right">8.32</div>
-                        <div class="text-right">9.91</div>
+                        <div>Net Profit (BDT M)</div><div class="text-right">7.25</div><div class="text-right">8.32</div><div class="text-right">9.91</div>
                     </div>
                 </div>
                 <div class="mt-8 grid grid-cols-2 gap-4 text-center">
                     <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                         <div class="text-sm text-gray-400">Projected IRR (3 Years)</div>
-                         <div class="text-2xl font-bold text-gold">21.5%</div>
+                        <div class="text-sm text-gray-400">Projected IRR (3Y)</div>
+                        <div class="text-2xl font-bold text-gold">21.5%</div>
                     </div>
                     <div class="p-4 bg-white/5 rounded-xl border border-white/10">
-                        <div class="text-sm text-gray-400">Cumulative Net Profit (FY26–FY28)</div>
+                        <div class="text-sm text-gray-400">Cumulative Profit</div>
                         <div class="text-2xl font-bold text-gold">BDT 25.48M</div>
                     </div>
                 </div>
             </div>
-
             <div class="slide">
                 <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">8. Risk Analysis</h2>
                 <div class="grid grid-cols-2 gap-8">
-                    <div class="p-6 bg-red-500/10 border border-red-500/20 rounded-xl">
-                        <h3 class="text-xl font-bold text-red-400 mb-2">Economic Risk</h3>
-                        <p class="text-gray-300 mb-4">High inflation (8.0%) increases operating costs.</p>
-                        <div class="text-sm text-gray-500"><strong>Mitigation:</strong> Forward-purchasing energy contracts.</div>
+                    <div class="p-6 bg-red-500/10 rounded-xl border border-red-500/20">
+                        <h3 class="text-xl font-bold text-red-400">Economic</h3>
+                        <p class="text-gray-300 mb-2">Inflation, energy cost.</p>
+                        <p class="text-xs text-gray-500"><strong>Mitigation:</strong> Forward energy contracts.</p>
                     </div>
-                    <div class="p-6 bg-amber-500/10 border border-amber-500/20 rounded-xl">
-                        <h3 class="text-xl font-bold text-amber-400 mb-2">Market Risk</h3>
-                        <p class="text-gray-300 mb-4">Global RMG slowdown reduces waste availability.</p>
-                        <div class="text-sm text-gray-500"><strong>Mitigation:</strong> Diversify to process jute/leather waste.</div>
-                    </div>
-                    <div class="p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl col-span-2">
-                        <h3 class="text-xl font-bold text-blue-400 mb-2">Operational Risk</h3>
-                        <p class="text-gray-300 mb-4">Machinery breakdown.</p>
-                        <div class="text-sm text-gray-500"><strong>Mitigation:</strong> 5% Capital reserve for spares inventory.</div>
+                    <div class="p-6 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                        <h3 class="text-xl font-bold text-blue-400">Operational</h3>
+                        <p class="text-gray-300 mb-2">Machinery breakdown.</p>
+                        <p class="text-xs text-gray-500"><strong>Mitigation:</strong> 5% capital reserved for spares.</p>
                     </div>
                 </div>
             </div>
-
             <div class="slide text-center">
-                <h2 class="text-4xl font-bold text-primary mb-12">9. Conclusion & Roadmap</h2>
+                <h2 class="text-4xl font-bold text-primary mb-12">9. Roadmap</h2>
                 <div class="flex flex-col gap-6 max-w-xl mx-auto">
                     <div class="flex items-center gap-4 p-4 bg-white/10 rounded-lg">
                         <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-bg font-bold">1</div>
                         <div class="text-left">
                             <h4 class="text-white text-lg font-bold">GTF Application</h4>
-                            <p class="text-gray-400 text-sm">Target Completion: <strong>Q1 2026</strong> (Finalize machinery list).</p>
+                            <p class="text-gray-400 text-sm">Q1 2026</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4 p-4 bg-white/10 rounded-lg">
                         <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-bg font-bold">2</div>
                         <div class="text-left">
                             <h4 class="text-white text-lg font-bold">Factory MOUs</h4>
-                            <p class="text-gray-400 text-sm">Secure binding agreements with 5 key supplier factories by <strong>Q2 2026</strong>.</p>
+                            <p class="text-gray-400 text-sm">Q2 2026</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-4 p-4 bg-white/10 rounded-lg">
                         <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-bg font-bold">3</div>
                         <div class="text-left">
                             <h4 class="text-white text-lg font-bold">Commercial Launch</h4>
-                            <p class="text-gray-400 text-sm">Machinery installation and start of production: <strong>Q4 2026</strong>.</p>
+                            <p class="text-gray-400 text-sm">Q4 2026</p>
                         </div>
                     </div>
                 </div>
-                <div class="mt-12 text-gray-500">
-                    Cumulative Profit Target (3 Years): <strong>BDT 25 Million+</strong>
-                </div>
             </div>
-
-             <div class="slide">
-                <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">10. The Founding Team</h2>
+            <div class="slide">
+                <h2 class="text-4xl font-bold text-primary mb-12 border-b border-white/10 pb-4">10. Founding Team</h2>
                 <div class="grid grid-cols-3 gap-8 text-center">
                     <div class="p-6 bg-surface rounded-xl border border-primary/30">
-                        
-                        <h3 class="text-2xl font-bold text-white mt-4">Orin Khan</h3>
-                        <p class="text-accent-green mb-3">CEO (Strategy & Tech)</p>
-                        <p class="text-sm text-gray-400">Former Head of Digital Innovation; SaaS scaling expertise.</p>
+                        <h3 class="text-2xl font-bold text-white">Orin Khan</h3>
+                        <p class="text-accent-green">CEO (Tech & Strategy)</p>
                     </div>
                     <div class="p-6 bg-surface rounded-xl border border-primary/30">
-                        
-                        <h3 class="text-2xl font-bold text-white mt-4">Sumaiya</h3>
-                        <p class="text-accent-green mb-3">Head of Circularity</p>
-                        <p class="text-sm text-gray-400">ESG/RMG factory integration specialist (BTEPC pilot program).</p>
+                        <h3 class="text-2xl font-bold text-white">Sumaiya</h3>
+                        <p class="text-accent-green">Head of Circularity</p>
                     </div>
                     <div class="p-6 bg-surface rounded-xl border border-primary/30">
-                        
-                        <h3 class="text-2xl font-bold text-white mt-4">Aifee Aadil</h3>
-                        <p class="text-accent-green mb-3">AI & Security Engineer</p>
-                        <p class="text-sm text-gray-400">Expert in zero-knowledge proof systems for compliance data security.</p>
+                        <h3 class="text-2xl font-bold text-white">Aifee Aadil</h3>
+                        <p class="text-accent-green">AI & Security Engineer</p>
                     </div>
-                </div>
-                <div class="mt-10 text-center text-gray-400 text-lg font-medium italic">
-                    "Deep industry knowledge paired with cutting-edge technology for ethical manufacturing."
                 </div>
             </div>
-
-
             <div class="slide text-center">
                 <h2 class="text-6xl font-display font-bold mb-12 text-white">Q & A</h2>
-                <p class="text-3xl text-primary mb-8">We welcome your questions on our model, financials, and GTF strategy.</p>
-                <p class="text-xl text-gray-400">Please direct your queries to the appropriate team lead.</p>
+                <p class="text-3xl text-primary mb-8">We welcome your questions.</p>
             </div>
-
             <div class="slide text-center">
                 <h2 class="text-6xl font-display font-bold mb-8 text-primary">Thank You</h2>
-                <p class="text-3xl text-white mb-12">We appreciate your time and consideration.</p>
+                <p class="text-3xl text-white mb-12">We appreciate your time.</p>
                 <div class="max-w-xl mx-auto bg-surface p-8 rounded-xl border border-white/10 space-y-4">
                     <div class="text-xl font-bold text-white">GreenLoop Textiles Ltd.</div>
                     <div class="text-lg text-gray-400 flex items-center justify-center gap-3">
                         <i class="fa-solid fa-envelope text-primary"></i> 
                         <span>invest@greenloop.bd</span>
                     </div>
-                    <div class="text-lg text-gray-400 flex items-center justify-center gap-3">
-                        <i class="fa-brands fa-linkedin text-primary"></i> 
-                        <span>/company/greenloop-textiles</span>
-                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
+    <!-- Presentation Script -->
     <script>
-        // Presentation Logic
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const overlay = document.getElementById('presentation');
         const counter = document.getElementById('slide-counter');
-        const totalSlides = slides.length; // Now correctly calculated as 13
-
+        const totalSlides = slides.length;
         function togglePresentation() {
             overlay.classList.toggle('active');
             document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : 'auto';
-            
-            // Reset to first slide when opening
-            if(overlay.classList.contains('active')) {
+            if (overlay.classList.contains('active')) {
                 currentSlide = 0;
                 updateSlides();
             }
         }
-
         function updateSlides() {
             slides.forEach(s => s.classList.remove('active'));
-            // Remove animation class before adding active class to reset animation state
-            slides.forEach(s => s.style.animation = 'none'); 
-            slides[currentSlide].style.animation = ''; // Re-enable animation for the active slide
-            
+            slides.forEach(s => s.style.animation = 'none');
+            slides[currentSlide].style.animation = '';
             slides[currentSlide].classList.add('active');
             counter.innerText = `${currentSlide + 1} / ${totalSlides}`;
         }
-
         function changeSlide(direction) {
             currentSlide += direction;
             if (currentSlide >= totalSlides) currentSlide = 0;
             if (currentSlide < 0) currentSlide = totalSlides - 1;
             updateSlides();
         }
-
-        // Keyboard Nav
         document.addEventListener('keydown', (e) => {
             if (!overlay.classList.contains('active')) return;
             if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
             if (e.key === 'ArrowLeft') changeSlide(-1);
             if (e.key === 'Escape') togglePresentation();
         });
-        
-        // Initial call to set the counter correctly
-        if(document.querySelector('.slide.active')) {
+        if (document.querySelector('.slide.active')) {
             updateSlides();
         }
     </script>
